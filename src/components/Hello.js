@@ -1,13 +1,14 @@
-function Hello(){
+import React, {useState} from 'react';
+
+const Hello = (props) =>{
+
+    const [fname, setFname] = useState('');
+    
     return(
         <>
-            <p>My Name is Sony!</p>
-            <input type="text"/>
-            <div>
-                <h1>The Man</h1>
-            </div>
+            <h2>Hello {props.name}</h2>
         </>
-    );
+    )
 }
 
 export default Hello;
