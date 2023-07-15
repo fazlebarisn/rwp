@@ -5,7 +5,7 @@ const Posts = () =>{
     const [posts, setPosts] = useState([]);
     
     useEffect( () => {
-        let url = 'http://localhost/r/wpr/wp-json/wp/v2/posts';
+        let url = `${process.env.REACT_APP_API_ROOT}/posts`;
         // let url = 'https://wooproducttable.com/wp-json/wp/v2/posts';
         axios.get(url).then( (responce) => {
             setPosts( responce.data );
