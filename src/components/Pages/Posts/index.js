@@ -19,7 +19,7 @@ const Posts = () =>{
                     posts && posts.map( (post) => {
                         // console.log(post.title.rendered);
                         return(
-                            <div key={post.id} className=' card p-3 w-[330px] shadow-lg rounded-lg'>
+                            <div key={post.id} className='card p-3 w-[330px] shadow-lg rounded-lg flex gap-5 flex-col'>
                                 <img src='https://via.placeholder.com/500' alt='{post.title.rendered}' />
                                 <h2 className='text-lg font-bold'>{post.title.rendered}</h2>
                                 <p dangerouslySetInnerHTML={{__html: post.excerpt.rendered}}></p>
