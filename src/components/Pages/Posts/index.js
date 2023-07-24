@@ -15,7 +15,7 @@ const Posts = () =>{
     return (
         <>
             {
-                posts.map( (post) => {
+                posts && posts.map( (post) => {
                     // console.log(post.title.rendered);
                     return(
                         <div key={post.id}>
