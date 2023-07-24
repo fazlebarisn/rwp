@@ -14,17 +14,20 @@ const Posts = () =>{
 
     return (
         <>
-            {
-                posts && posts.map( (post) => {
-                    // console.log(post.title.rendered);
-                    return(
-                        <div key={post.id}>
-                            <h2>{post.title.rendered}</h2>
-                            <p dangerouslySetInnerHTML={{__html: post.excerpt.rendered}}></p>
-                        </div>
-                    )
-                })
-            }
+            <div className='w-4/5 py-10 m-auto flex justify-between align-middle flex-wrap gap-10'>
+                {
+                    posts && posts.map( (post) => {
+                        // console.log(post.title.rendered);
+                        return(
+                            <div key={post.id} className=' card p-3 w-[330px] shadow-lg rounded-lg'>
+                                <img src='https://via.placeholder.com/500' alt='{post.title.rendered}' />
+                                <h2 className='text-lg font-bold'>{post.title.rendered}</h2>
+                                <p dangerouslySetInnerHTML={{__html: post.excerpt.rendered}}></p>
+                            </div>
+                        )
+                    })
+                }
+            </div>
         </>
     );
 }
