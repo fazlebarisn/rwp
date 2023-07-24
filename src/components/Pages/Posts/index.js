@@ -17,7 +17,12 @@ const Posts = () =>{
             {
                 posts.map( (post) => {
                     // console.log(post.title.rendered);
-                    return <p key={post.id}>{post.title.rendered}</p>;
+                    return(
+                        <div key={post.id}>
+                            <h2>{post.title.rendered}</h2>
+                            <p dangerouslySetInnerHTML={{__html: post.excerpt.rendered}}></p>
+                        </div>
+                    )
                 })
             }
         </>
